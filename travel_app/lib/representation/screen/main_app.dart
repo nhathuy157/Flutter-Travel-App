@@ -8,7 +8,7 @@ import 'package:travel_app/representation/screen/home_screen.dart';
 class MainApp extends StatefulWidget {
   const MainApp({Key? key}) : super(key: key);
 
-  static const routeName = 'main_app';
+  static const routeName = '/main_app';
 
   @override
   State<MainApp> createState() => _MainAppState();

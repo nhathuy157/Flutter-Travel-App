@@ -28,9 +28,11 @@ class _SplashScreenState extends State<SplashScreen> {
      await Future.delayed(Duration(milliseconds: 1000));
 
      if(ignoreIntroScreen != null && ignoreIntroScreen){
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pushNamed(MainApp.routeName);
      } else {
       LocalSrorageHelper.setValue('ignoreIntroScreen', true);
+      // ignore: use_build_context_synchronously
       Navigator.of(context).pushNamed(IntroScreen.routeName);
      }
      
