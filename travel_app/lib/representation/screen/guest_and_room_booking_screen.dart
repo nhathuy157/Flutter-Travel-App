@@ -24,6 +24,7 @@ class _GuestAndRoomScreenState extends State<GuestAndRoomScreen> {
   Widget build(BuildContext context) {
     return AppBarContainer(
       titleString: 'Add guest and room',
+      implementLeading: true,
     //  padding: EdgeInsets.all(kMediumPadding),
       child: Column(
         children: [

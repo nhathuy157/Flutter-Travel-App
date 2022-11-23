@@ -17,5 +17,10 @@ class AssetHelper {
   static const String iconPeople = 'assets/icons/icon_people.png';
   static const String iconMinus = 'assets/icons/icon_minus.png';
   static const String iconPlus = 'assets/icons/icon_plus.png';
+  static const String hotel1 = 'assets/images/hotel1.png';
+  static const String hotel2 = 'assets/images/hotel2.png';
+  static const String hotel3 = 'assets/images/hotel3.png';
+  static const String iconLocationHotel = 'assets/icons/icon_location_hotel.png';
+  static const String iconStar = 'assets/icons/icon_star.png';
 
 }

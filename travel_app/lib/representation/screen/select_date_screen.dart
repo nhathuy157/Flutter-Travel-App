@@ -19,6 +19,7 @@ class SelectDateScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBarContainer(
         titleString: 'Select date',
+        implementLeading: true,
         child: Column(
           children: [
             SizedBox(
