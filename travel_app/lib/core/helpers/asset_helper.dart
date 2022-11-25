@@ -22,5 +22,10 @@ class AssetHelper {
   static const String hotel3 = 'assets/images/hotel3.png';
   static const String iconLocationHotel = 'assets/icons/icon_location_hotel.png';
   static const String iconStar = 'assets/icons/icon_star.png';
+  static const String korea = 'assets/images/korea.png';
+  static const String turkey = 'assets/images/turkey.png';
+  static const String dubai = 'assets/images/dubai.png';
+  static const String japan = 'assets/images/japan.png';
+  static const String hotelDetails = 'assets/images/hotel_details.png';
 
 }
