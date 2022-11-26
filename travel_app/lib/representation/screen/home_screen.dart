@@ -63,7 +63,8 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget _buildImageHomeScreen(String name, String image) {
     return GestureDetector(
       onTap: (() {
-        Navigator.of(context).pushNamed(HotelBookingScreen.routeName, arguments: name);
+        Navigator.of(context)
+            .pushNamed(HotelBookingScreen.routeName, arguments: name);
       }),
       child: Container(
         margin: EdgeInsets.only(bottom: kDefaultPadding),
@@ -77,7 +78,6 @@ class _HomeScreenState extends State<HomeScreen> {
           Positioned(
             right: kMinPadding,
             child: Padding(
-             
               padding: const EdgeInsets.all(kDefaultPadding),
               child: Icon(
                 Icons.favorite,

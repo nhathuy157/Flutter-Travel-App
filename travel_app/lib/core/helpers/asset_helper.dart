@@ -27,5 +27,16 @@ class AssetHelper {
   static const String dubai = 'assets/images/dubai.png';
   static const String japan = 'assets/images/japan.png';
   static const String hotelDetails = 'assets/images/hotel_details.png';
+  static const String iconWifi = 'assets/icons/icon_wifi.png';
+  static const String iconBreakfast = 'assets/icons/iconBreakfast.png';
+  static const String iconMore = 'assets/icons/icon_more.png';
+  static const String iconExchange = 'assets/icons/iconExchange.png';
+  static const String iconDesk = 'assets/icons/iconFrontDesk.png';
+  static const String imageMap = 'assets/images/maps.png';
+  static const String iconNonRefund = 'assets/icons/icon_non_refund.png';
+  static const String iconNonSmoke = 'assets/icons/icon_non_smoke.png';
+  static const String room1 = 'assets/images/room1.png';
+  static const String room2 = 'assets/images/room2.png';
+  static const String room3 = 'assets/images/room3.png';
 
 }
