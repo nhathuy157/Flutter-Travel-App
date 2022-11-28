@@ -1,11 +1,12 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/src/foundation/key.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:travel_app/representation/widget/app_bar_container.dart';
-import 'package:travel_app/representation/widget/item_room_widget.dart';
+import 'package:flutter/material.dart';
+import 'package:travel_app/representation/screen/check_out_screen.dart';
+
 
 import '../../core/helpers/asset_helper.dart';
 import '../../data/models/room_model.dart';
+import '../widget/app_bar_container.dart';
+import '../widget/item_room_widget.dart';
+
 
 class RoomsScreen extends StatefulWidget {
   const RoomsScreen({Key? key}) : super(key: key);
@@ -43,16 +44,18 @@ class _RoomsScreenState extends State<RoomsScreen> {
   @override
   Widget build(BuildContext context) {
     return AppBarContainer(
-      implementLeading: true,
-      titleString: 'Select Room',
+      titleString: 'Select room',
       child: SingleChildScrollView(
         child: Column(
           children: listRoom
-              .map((e) => ItemRoomWidget(
+              .map(
+                (e) => ItemRoomWidget(
                   roomModel: e,
-                  onTap: (() {
-                    // Navigator.of(context).pushNamed(CheckOutScreen.routeName, arguments: e);
-                  })))
+                  onTap: () {
+                    Navigator.of(context).pushNamed(CheckOutScreen.routeName, arguments: e);
+                  },
+                ),
+              )
               .toList(),
         ),
       ),

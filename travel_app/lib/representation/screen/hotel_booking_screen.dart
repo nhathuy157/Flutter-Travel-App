@@ -10,8 +10,9 @@ import 'package:travel_app/representation/widget/item_booking_widget.dart';
 import 'package:travel_app/core/extensions/date_ext.dart';
 
 class HotelBookingScreen extends StatefulWidget {
-  const HotelBookingScreen({Key? key}) : super(key: key);
+  const HotelBookingScreen({Key? key, required this.destination}) : super(key: key);
 
+  final String destination;
   static const String routeName = '/hotel_booking_screen';
 
   @override
@@ -35,7 +36,7 @@ class _HotelBookingScreenState extends State<HotelBookingScreen> {
             ItemBookingWidget(
               icon: AssetHelper.iconLocation,
               subTitle: 'Destination',
-              title: 'South Korea',
+              title: widget.destination,
               onTap: (() {}),
             ),
             SizedBox(

@@ -1,8 +1,6 @@
-
-
-
 import 'package:flutter/material.dart';
 import 'package:travel_app/data/models/hotel_models.dart';
+import 'package:travel_app/representation/screen/check_out_screen.dart';
 import 'package:travel_app/representation/screen/detail_hotel_screen.dart';
 import 'package:travel_app/representation/screen/guest_and_room_booking_screen.dart';
 import 'package:travel_app/representation/screen/hotel_booking_screen.dart';
@@ -11,21 +9,17 @@ import 'package:travel_app/representation/screen/intro_screen.dart';
 import 'package:travel_app/representation/screen/main_app.dart';
 import 'package:travel_app/representation/screen/room_screen.dart';
 import 'package:travel_app/representation/screen/select_date_screen.dart';
-import 'package:travel_app/representation/screen/splash_screen.dart';
+
+import 'data/models/room_model.dart';
+
 
 final Map<String, WidgetBuilder> routes = {
-  SplashScreen.routeName:(context) => const SplashScreen(),
-  IntroScreen.routeName:(context) => const IntroScreen(),
-  MainApp.routeName:(context) => const MainApp(),
-  HotelScreen.routeName:(context) => HotelScreen(),
-  HotelBookingScreen.routeName:(context) => const HotelBookingScreen(),
-  SelectDateScreen.routeName:(context) => SelectDateScreen(),
-  GuestAndRoomScreen.routeName:(context) => GuestAndRoomScreen(),
-  RoomsScreen.routeName:(context) => RoomsScreen(),
-//  DetailHotelScreen.routeName:(context) => DetailHotelScreen()
-
-
-  
+  IntroScreen.routeName: (context) => const IntroScreen(),
+  MainApp.routeName: (context) => MainApp(),
+  HotelScreen.routeName: (context) => HotelScreen(),
+  SelectDateScreen.routeName: (context) => SelectDateScreen(),
+  GuestAndRoomScreen.routeName: (context) => GuestAndRoomScreen(),
+  RoomsScreen.routeName: (context) => RoomsScreen(),
 };
 
 MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {
@@ -38,7 +32,24 @@ MaterialPageRoute<dynamic>? generateRoutes(RouteSettings settings) {
           hotelModel: hotelModel,
         ),
       );
-      
+    case CheckOutScreen.routeName:
+      final RoomModel roomModel = (settings.arguments as RoomModel);
+      return MaterialPageRoute<dynamic>(
+        settings: settings,
+        builder: (context) => CheckOutScreen(
+          roomModel: roomModel,
+        ),
+      );
+
+    case HotelBookingScreen.routeName:
+      final String? destination = (settings.arguments as String?);
+      return MaterialPageRoute<dynamic>(
+        settings: settings,
+        builder: (context) => HotelBookingScreen(
+          destination: destination.toString(),
+        ),
+      );
+    default:
+      return null;
   }
-  return null;
 }
